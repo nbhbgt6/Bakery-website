@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link href="style.css" rel="stylesheet">
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css' rel='stylesheet' />
+    <title>Baked by Bronique</title>
+  </head>
+  <body>
+    <style>
+      .carousel-item {
+        height: 40rem;
+        background-color: #000;
+        color: white;
+        position:relative;
+        background-position: center;
+        background-size:cover;
+        
+      }
+      #container {
+        position: absolute;
+        bottom: 0;
+        left: 50;
+        right: 0;
+        padding-bottom: 220px;
+      }
+      .overlay-image {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        background-position: center;
+        background-size:cover;
+        opacity: 0.5;}
+        #map {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+  @media (max-width: 768px) { 
+    #contact {
+      -webkit-box-shadow: 3px 3px 5px 3px rgba(186,186,186,1);
+  -moz-box-shadow: 3px 3px 5px 3px rgba(186,186,186,1);
+  box-shadow: 3px 3px 5px 3px rgba(186,186,186,1);
+    }
+#logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+  }
+    </style>
+<!-- navbar -->
+<nav class="navbar navbar-expand fixed-top navbar-dark ">
+  <div class="container">
+  <a href="#menu" class="nav-brand text-white h2" style="text-decoration: none; font-family: 'Brush Script MT', cursive;" id="logo">Baked by Bronique</a>
+  
+    <ul class="navbar-nav ">
+      <li class="nav-item px-2">
+        <a href="#" class="nav-link text-white"><i class="bi bi-search h5"></i></a>
+      </li>
+      <li class="nav-item px-2">
+        <a href="#" class="nav-link text-white"><i class="bi bi-bag h5"></i></a>
+      </li>
+    </ul>
+    
+  </div>
+  
+  
+  </nav>
+
+
+
+ 
+</section>
+
+<!-- About us -->
+<section>
+<div class="pt-5" style="	background-position: top left;	background-size: 100%;	background-repeat: repeat;	background-image: linear-gradient(to bottom, rgba(219, 226, 17, 0.6), rgba(226, 115, 17, 0.8));" >
+  <div class="container">
+    <div class="row">
+      <div class="container px-md-5 p-3 col-md-6 d-flex flex-column align-items-start justify-content-center">
+        <h1 text-center>Everyday Fresh Out of Oven</h1>
+        <p class="mb-3 lead fw-bold fst-italic ">As an authentic bakery, In The Mix have commitment in using premium ingredients. Our carefully selected ingredients are combined with natural baking methods to make fresh baked goods at each of our stores every day.</p>
+        <div class="row">
+          <div class="col-md-12"> <i class="fa fa-stop-circle fa-3x mr-3 text-muted d-inline"></i> <i class="fa fa-circle-o fa-3x mx-3 text-muted d-inline"></i> <i class="fa fa-stop-circle-o fa-3x mx-3 text-muted d-inline"></i> <i class="fa fa-circle fa-3x ml-3 text-muted d-inline"></i> </div>
+        </div>
+      </div>
+      <div class="col-md-6"> <img class="img-fluid d-block" src="https://cdn-icons-png.flaticon.com/512/448/448003.png"> </div>
+    </div>
+  </div>
+</div>
+<div  style="	background-position: top left;	background-size: 100%;	background-repeat: repeat;	background-image: linear-gradient(to bottom, rgba(219, 226, 17, 0.6), rgba(226, 115, 17, 0.8));" >
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6"> <img class="img-fluid d-block" src="https://cdn-icons.flaticon.com/png/512/3173/premium/3173469.png?token=exp=1649034532~hmac=3382c67f6f55e6242d363284415b3a89"> </div>
+      <div class="container px-md-5 p-3 col-md-6 d-flex flex-column align-items-start justify-content-center">
+        <h1 text-center>Your Sweet Tooth Will Be Satisfied</h1>
+        <p class="mb-3 lead fw-bold fst-italic ">We have a wide variety of all the desserts and pastries, made right for order. You name it, we have it.</p>
+        <div class="row">
+          <div class="col-md-12"> <i class="fa fa-stop-circle fa-3x mr-3 text-muted d-inline"></i> <i class="fa fa-circle-o fa-3x mx-3 text-muted d-inline"></i> <i class="fa fa-stop-circle-o fa-3x mx-3 text-muted d-inline"></i> <i class="fa fa-circle fa-3x ml-3 text-muted d-inline"></i> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+ <!-- Menu -->
+ <section id="menu">
+  <div class="container bg-light p-3">
+    <div class="row">
+      <h1 class="text-center p-5" > MENU LIST </h1>
+      <div class="col-md-4 d-flex justify-content-center flex-column align-items-center" style="">
+        <a href="https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/brownie-02.jpg" title="Brownie" data-effect="mfp-zoom-in">
+          <img src="https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/brownie-02.jpg" data-src="https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/brownie-02.jpg" class="mb-3 rounded-circle" width="100" height="100" data-was-processed="true" style="">
+        </a>
+        <div class="menu_title">
+          <h3 class="">Brownie</h3><em class="justify-content-center d-flex">$30</em>
+        </div>
+        <p class="">8 Inch cut into 8-10 slices</p>
+      </div>
+      <div class="col-md-4 d-flex flex-column align-items-center justify-content-center" style="">
+        <a href="https://www.onceuponachef.com/images/2017/12/cheesecake-1200x1393.jpg" title="Brownie" data-effect="mfp-zoom-in">
+          <img src="https://www.onceuponachef.com/images/2017/12/cheesecake-1200x1393.jpg" data-src="https://www.onceuponachef.com/images/2017/12/cheesecake-1200x1393.jpg" class="rounded-circle mb-3" width="100" height="100" data-was-processed="true">
+        </a>
+        <div class="menu_title">
+          <h3>Cheesecake</h3><em class="d-flex justify-content-center">$30</em>
+        </div>
+        <p>6 Inch cut into 4-6 slices</p>
+      </div>
+      <div class="col-md-4 d-flex flex-column justify-content-center align-items-center">
+        <a href="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRbRlKNxEPqu46l6YpucRTTWqxAvlzsjg6AI3p0W-Jn1Keop6TR" title="Pumpkin Cookies" data-effect="mfp-zoom-in">
+          <img data-src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRbRlKNxEPqu46l6YpucRTTWqxAvlzsjg6AI3p0W-Jn1Keop6TR" class="rounded-circle mb-3" width="100" height="100" data-was-processed="true" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRbRlKNxEPqu46l6YpucRTTWqxAvlzsjg6AI3p0W-Jn1Keop6TR">
+        </a>
+        <div class="menu_title">
+          <h3 contenteditable="true">Chocolate Chip&nbsp;</h3><em class="d-flex justify-content-center">$30</em>
+        </div>
+        <p>Sold by Dozens</p>
+      </div>
+      <div class="col-md-4 d-flex justify-content-center flex-column align-items-center" style="">
+        <a href="https://handletheheat.com/wp-content/uploads/2015/03/Best-Birthday-Cake-with-milk-chocolate-buttercream-SQUARE.jpg" title="Brownie" data-effect="mfp-zoom-in">
+          <img data-src="https://handletheheat.com/wp-content/uploads/2015/03/Best-Birthday-Cake-with-milk-chocolate-buttercream-SQUARE.jpg" class="mb-3 rounded-circle" width="100" height="100" data-was-processed="true" style="" src="https://handletheheat.com/wp-content/uploads/2015/03/Best-Birthday-Cake-with-milk-chocolate-buttercream-SQUARE.jpg">
+        </a>
+        <div class="menu_title">
+          <h3 class="">Birthday Cake</h3><em class="justify-content-center d-flex">Price depends on requests</em>
+        </div>
+        <p class="">Can be made in any size</p>
+      </div>
+      <div class="col-md-4 d-flex flex-column align-items-center justify-content-center" style="">
+        <a href="https://natashaskitchen.com/wp-content/uploads/2020/05/Vanilla-Cupcakes-3.jpg" title="Brownie" data-effect="mfp-zoom-in">
+          <img data-src="https://natashaskitchen.com/wp-content/uploads/2020/05/Vanilla-Cupcakes-3.jpg" class="rounded-circle mb-3" width="100" height="100" data-was-processed="true" src="https://natashaskitchen.com/wp-content/uploads/2020/05/Vanilla-Cupcakes-3.jpg">
+        </a>
+        <div class="menu_title">
+          <h3>Cupcakes</h3><em class="d-flex justify-content-center">$30</em>
+        </div>
+        <p>Sold by Dozens</p>
+      </div>
+      <div class="col-md-4 d-flex flex-column justify-content-center align-items-center">
+        <a href="https://polki.pl/foto/4_3_LARGE/tiramisu-przepis-na-ciasto-na-biszkopcie-2350750.jpg" title="Pumpkin Cookies" data-effect="mfp-zoom-in">
+          <img data-src="https://polki.pl/foto/4_3_LARGE/tiramisu-przepis-na-ciasto-na-biszkopcie-2350750.jpg" class="rounded-circle mb-3" width="100" height="100" data-was-processed="true" src="https://polki.pl/foto/4_3_LARGE/tiramisu-przepis-na-ciasto-na-biszkopcie-2350750.jpg">
+        </a>
+        <div class="menu_title">
+          <h3>Tiramisu</h3><em class="d-flex justify-content-center" >$30</em>
+        </div>
+        <p>6 Inch cut into 4-6 slices</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<div class="py-5" style="	background-image: linear-gradient(to bottom, rgba(226, 17, 141, 0.5), rgba(226, 17, 141, 0.24));	background-size: 100%;	background-position: top left;	background-repeat: repeat;" >
+  <div class="container">
+    <div class="row">
+      <div class="text-center mx-auto col-md-12">
+        <h1 class="mb-4 text-dark">Check What Other Have To Say About Us</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 p-3">
+        <div class="card">
+          <div class="card-body p-4">
+            <div class="row">
+              <div class="col-md-4 col-3"> <img class="img-fluid d-block rounded-circle" src="https://randomuser.me/api/portraits/women/14.jpg"> </div>
+              <div class="d-flex  col-md-8 flex-column justify-content-center align-items-start col-9">
+                <p class="mb-0 lead">Susan</p>
+                <p class="mb-0">Regular Customer</p>
+              </div>
+            </div>
+            <p class="mt-3 mb-0">Cakes and pastries which are making here are best quality and hygiene. I must really say that it is the best cake shop in The Bahamas which gives you the premium quality. There are different kinds of cakes as per your favourite flavours. It's very delicious and one must really try it out.&nbsp;</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 p-3">
+        <div class="card">
+          <div class="card-body p-4">
+            <div class="row">
+              <div class="col-md-4 col-3"> <img class="img-fluid d-block rounded-circle" src="https://randomuser.me/api/portraits/men/17.jpg"> </div>
+              <div class="d-flex  col-md-8 flex-column justify-content-center align-items-start col-9">
+                <p class="mb-0 lead">James</p>
+                <p class="mb-0">First Time Client</p>
+              </div>
+            </div>
+            <p class="mt-3 mb-0">What a variety of cakes! And that too excellent. Home delivery very prompt. They got a cake delivered to our resort in Freeport, through a telephone booking. Would visit again whenever I visit Freeport.&nbsp;</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 p-3">
+        <div class="card">
+          <div class="card-body p-4">
+            <div class="row">
+              <div class="col-md-4 col-3"> <img class="img-fluid d-block rounded-circle" src="https://randomuser.me/api/portraits/women/16.jpg"> </div>
+              <div class="d-flex  col-md-8 flex-column justify-content-center align-items-start col-9">
+                <p class="mb-0 lead">Monique</p>
+                <p class="mb-0">Food Blogger</p>
+              </div>
+            </div>
+            <p class="mt-3 mb-0">The cutiepie is amazing! The cakes were to die for! But most of all the service was outstanding! Highly recommend this establishment. Very quaint!<br>The people who run it are very nice and welcoming. They have taken baking courses in Europe and have brought the best of east n west in to their shop.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Contact -->
+     
+<section class="p-5">
+  <div class="container " id="contact">
+    <div class="row g-4">
+      <div class="col-md">
+        <h2 class="text-center mb-4">Contact Info</h2>
+        <ul class="list-group list-group-flush lead">
+          <li class="list-group-item">
+            <span class="font-weight-bold"> <i class="bi bi-geo-alt"></i> Main Location:</span> 50 Main Street Boston MA
+          </li>
+          <li class="list-group-item">
+            <span class="font-weight-bold"><i class="bi bi-tag"></i> Requests:</span> +94 423-23-221
+            reservations@Foores.com
+          </li>
+          
+          <li class="list-group-item">
+            <span class="font-weight-bold"><i class="bi bi-clock"></i> Opening Hours:</span> Mon - Sat: 10am - 11pm
+            Sunday: Closed
+          </li>
+
+        </ul>
+      </div>
+      <div class="col-md">
+        <div id="map"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Footer -->
+
+    <footer class="p-5 bg-dark text-white text-center">
+      <div class="container d-inline-flex justify-content-between align-items-center f">
+        <p class="lead"> &copy; 2022 Baked by Bronique </p>
+        
+          <div style="
+          white-space: nowrap;">
+            <i class=" px-2 h5 bi bi-facebook"></i>
+              <i class="px-2 h5 bi bi-instagram"></i>
+        
+        <i class="px-2 h5 bi bi-whatsapp"></i>
+        </div>
+      </div>
+    </footer>
+    
+    
+          
+      
+
+    
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
+  <script>
+    mapboxgl.accessToken = "pk.eyJ1IjoibmJoYmd0NiIsImEiOiJjbDFiMzB1anAwa20xM2prb3dqdmtpNXN1In0.L-4HPiIKrAcjcUCKA9MtSg";
+    const map = new mapboxgl.Map({
+    container: 'map', // container ID
+    style: 'mapbox://styles/mapbox/streets-v11', // style URL
+    center: [-78.622501, 26.518386], // starting position [lng, lat]
+    zoom: 18 // starting zoom
+    });
+
+var nav = document.querySelector('nav');
+
+window.addEventListener('scroll', function () {
+
+if (window.pageYOffset > 100) { nav.classList.add('bg-dark', 'shadow');
+
+} else {
+
+nav.classList.remove('bg-dark', 'shadow');
+
+}
+
+});
+
+</script>
+
+  </body>
+</html>
